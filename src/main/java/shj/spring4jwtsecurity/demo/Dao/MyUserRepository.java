@@ -4,6 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import shj.spring4jwtsecurity.demo.Model.MyUser;
 
+@SuppressWarnings("UnnecessaryInterfaceModifier")
 @Repository
 public interface MyUserRepository extends JpaRepository<MyUser, Long> {
 

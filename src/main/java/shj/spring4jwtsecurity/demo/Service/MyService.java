@@ -5,10 +5,10 @@ import shj.spring4jwtsecurity.demo.Model.MyUser;
 
 public interface MyService {
 
-  public MyUser saveUser(MyUser user);
+  MyUser saveUser(MyUser user);
 
-  public void addRoleToUser(String userName, String roleName);
+  void addRoleToUser(String userName, String roleName);
 
-  public MyUser findByUsername(String username);
+  MyUser findByUsername(String username);
 
 }

@@ -19,11 +19,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Date;
 
-public class JWTAuthentificationFilter extends UsernamePasswordAuthenticationFilter {
+class JWTAuthentificationFilter extends UsernamePasswordAuthenticationFilter {
 
   private AuthenticationManager authenticationManager;
-  @Autowired
-  private ObjectMapper objectMapper;
 
   public JWTAuthentificationFilter(AuthenticationManager authenticationManager) {
     this.authenticationManager = authenticationManager;
@@ -32,7 +30,7 @@ public class JWTAuthentificationFilter extends UsernamePasswordAuthenticationFil
   @Override
   public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
 
-    MyUser user = null;
+    MyUser user;
 
     try {
       user = new ObjectMapper().readValue(request.getInputStream(), MyUser.class);

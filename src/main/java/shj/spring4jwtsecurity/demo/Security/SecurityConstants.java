@@ -1,6 +1,6 @@
 package shj.spring4jwtsecurity.demo.Security;
 
-public class SecurityConstants {
+class SecurityConstants {
     public static final String SECRET = "021487!";
     public static final String ROLE_KEY = "roles";
     public static final String AUTHORITY_KEY = "authority";

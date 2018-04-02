@@ -17,12 +17,17 @@ import java.util.stream.Stream;
 
 @SpringBootApplication
 public class DemoApplication implements CommandLineRunner{
-  @Autowired
-  MyService myService;
-  @Autowired
-  RoleRepository roleRepository;
 
-	public static void main(String[] args) {
+  private MyService myService;
+  private RoleRepository roleRepository;
+
+  @Autowired
+  public DemoApplication(MyService myService,  RoleRepository roleRepository) {
+    this.myService = myService;
+    this.roleRepository = roleRepository;
+  }
+
+  public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
@@ -44,8 +49,4 @@ public class DemoApplication implements CommandLineRunner{
 	  return new BCryptPasswordEncoder();
   }
 
-  @Bean
-  public ObjectMapper objectMapper(){
-	  return new ObjectMapper();
-  }
 }

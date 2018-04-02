@@ -13,12 +13,20 @@ import shj.spring4jwtsecurity.demo.Service.MyService;
 @Service
 @Transactional
 public class MyServiceImpl implements MyService {
+
+  private MyUserRepository myUserRepository;
+
+  private RoleRepository roleRepository;
+
+  private BCryptPasswordEncoder bCryptPasswordEncoder;
+
   @Autowired
-  MyUserRepository myUserRepository;
-  @Autowired
-  RoleRepository roleRepository;
-  @Autowired
-  BCryptPasswordEncoder bCryptPasswordEncoder;
+  public MyServiceImpl(BCryptPasswordEncoder bCryptPasswordEncoder, RoleRepository roleRepository, MyUserRepository myUserRepository) {
+    this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+    this.roleRepository = roleRepository;
+    this.myUserRepository = myUserRepository;
+  }
+
 
   @Override
   public MyUser saveUser(MyUser user) {
