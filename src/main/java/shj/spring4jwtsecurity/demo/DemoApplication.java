@@ -16,37 +16,12 @@ import java.util.ArrayList;
 import java.util.stream.Stream;
 
 @SpringBootApplication
-public class DemoApplication implements CommandLineRunner{
-
-  private MyService myService;
-  private RoleRepository roleRepository;
-
-  @Autowired
-  public DemoApplication(MyService myService,  RoleRepository roleRepository) {
-    this.myService = myService;
-    this.roleRepository = roleRepository;
-  }
+public class DemoApplication{
 
   public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-  @Override
-  public void run(String... strings) throws Exception {
 
-    Stream.of(new Role(null, Role.ADMIN), new Role(null, Role.USER)).forEach(role -> this.roleRepository.save(role));
-
-    Stream.of(new MyUser(null, "henri","henri", new ArrayList<>()), new MyUser(null, "chloe", "chloe", new ArrayList<>()))
-      .forEach(user -> this.myService.saveUser(user));
-
-    this.myService.addRoleToUser("henri", Role.USER);
-    this.myService.addRoleToUser("henri", Role.ADMIN);
-    this.myService.addRoleToUser("chloe", Role.USER);
-  }
-
-  @Bean
-  public BCryptPasswordEncoder bCryptPasswordEncoder(){
-	  return new BCryptPasswordEncoder();
-  }
 
 }

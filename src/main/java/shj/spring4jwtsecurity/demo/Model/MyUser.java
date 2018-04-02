@@ -19,6 +19,7 @@ import java.util.Collection;
  */
 
 @Entity
+@Table(name = "Users")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

@@ -44,7 +44,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         .and()
           .authorizeRequests()                                                                         /* Définir les différentes autorisations par rapport aux url*/
           .antMatchers("/users/**", "/login/**").permitAll()
-          .antMatchers(HttpMethod.POST, "/tasks/add/**").hasAuthority(Role.ADMIN)
+          .antMatchers(HttpMethod.POST, "/posts/**").hasAuthority(Role.ADMIN)
           .anyRequest().authenticated()
       .and()
           .addFilter( new JWTAuthentificationFilter(authenticationManager()))                           /* Ajouter le filtre qui permet de générer le token jwt si l'authentification est réussie*/
