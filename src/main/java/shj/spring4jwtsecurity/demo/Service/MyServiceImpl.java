@@ -10,6 +10,12 @@ import shj.spring4jwtsecurity.demo.Model.MyUser;
 import shj.spring4jwtsecurity.demo.Model.Role;
 import shj.spring4jwtsecurity.demo.Service.MyService;
 
+/**
+ * Implémentation de l'interface MyService
+ * @Project Spring4_Jwt_Security
+ * @Author Henri Joel SEDJAME
+ * @Date 02/04/2018
+ */
 @Service
 @Transactional
 public class MyServiceImpl implements MyService {

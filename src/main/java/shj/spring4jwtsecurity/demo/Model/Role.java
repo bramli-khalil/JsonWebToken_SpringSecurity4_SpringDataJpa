@@ -8,6 +8,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+/**
+ * Objet métier représentant le role de l'utilisateur
+ * @Project Spring4_Jwt_Security
+ * @Author Henri Joel SEDJAME
+ * @Date 02/04/2018
+ */
+
 @Entity
 @Data
 @AllArgsConstructor

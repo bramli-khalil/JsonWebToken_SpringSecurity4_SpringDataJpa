@@ -17,6 +17,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
 
+/**
+ * Classe chargée de vérifier la validité du token à chaque requête
+ * @Project Spring4_Jwt_Security
+ * @Author Henri Joel SEDJAME
+ * @Date 02/04/2018
+ */
+
 class JWTAuthorizationFilter extends OncePerRequestFilter{
 
   @Override

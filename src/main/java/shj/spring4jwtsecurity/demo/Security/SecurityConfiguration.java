@@ -14,6 +14,12 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import shj.spring4jwtsecurity.demo.Model.Role;
 
+/**
+ * Classe de configuration de la sécurité
+ * @Project Spring4_Jwt_Security
+ * @Author Henri Joel SEDJAME
+ * @Date 02/04/2018
+ */
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
@@ -23,8 +29,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
   @Autowired
   @Qualifier("customUserDetailsService")
   private UserDetailsService service;
-
-
 
   @Override
   protected void configure(AuthenticationManagerBuilder auth) throws Exception {

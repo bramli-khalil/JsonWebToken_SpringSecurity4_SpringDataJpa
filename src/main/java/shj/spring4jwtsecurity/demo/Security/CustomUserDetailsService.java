@@ -14,6 +14,13 @@ import shj.spring4jwtsecurity.demo.Service.MyService;
 import java.util.ArrayList;
 import java.util.Collection;
 
+/**
+ * Classe permettant de charger l'utilisateur connecté
+ * @Project Spring4_Jwt_Security
+ * @Author Henri Joel SEDJAME
+ * @Date 02/04/2018
+ */
+
 @Service(value = "customUserDetailsService")
 public class CustomUserDetailsService implements UserDetailsService {
 

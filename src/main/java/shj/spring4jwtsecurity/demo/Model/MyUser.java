@@ -10,6 +10,14 @@ import shj.spring4jwtsecurity.demo.Model.Role;
 import javax.persistence.*;
 import java.util.Collection;
 
+
+/**
+ * Objet métier représentant l'utilisateur connecté
+ * @Project Spring4_Jwt_Security
+ * @Author Henri Joel SEDJAME
+ * @Date 02/04/2018
+ */
+
 @Entity
 @Data
 @AllArgsConstructor
